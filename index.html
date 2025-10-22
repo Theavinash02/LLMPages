@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My GitHub Pages Site</title>
+    <!-- External Libraries: marked for Markdown rendering -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            background-color: #ffffff;
+            padding: 30px 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.2em;
+        }
+        nav {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+        }
+        nav button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            margin: 0 8px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        nav button:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+        }
+        nav button.active {
+            background-color: #e67e22;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+        }
+        #content-display {
+            background-color: #fdfdfd;
+            border: 1px solid #e0e0e0;
+            padding: 30px;
+            border-radius: 6px;
+            min-height: 300px;
+            font-size: 0.95em;
+            overflow-x: auto; /* For pre-formatted content */
+        }
+        #content-display pre {
+            background-color: #ecf0f1;
+            padding: 15px;
+            border-radius: 4px;
+            white-space: pre-wrap; /* Preserve formatting and wrap */
+            word-wrap: break-word;
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 0.9em;
+            border: 1px solid #dde1e2;
+        }
+        #content-display h2 {
+            color: #34495e;
+            margin-top: 0;
+            margin-bottom: 20px;
+            border-bottom: 1px dashed #e0e0e0;
+            padding-bottom: 10px;
+        }
+        #content-display svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            padding: 10px;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>My GitHub Pages Site</h1>
+        <nav>
+            <button data-file="ashravan">Ashravan Story</button>
+            <button data-file="dilemma">Dilemma (JSON)</button>
+            <button data-file="about">About (Markdown)</button>
+            <button data-file="pelican">Pelican (SVG)</button>
+            <button data-file="restaurant">Restaurant (JSON)</button>
+            <button data-file="prediction">Prediction (JSON)</button>
+            <button data-file="license">LICENSE</button>
+            <button data-file="uid">UID</button>
+        </nav>
+        <div id="content-display">
+            <h2>Welcome!</h2>
+            <p>Click on any of the buttons above to view the content of the embedded files.</p>
+        </div>
+    </div>
+
+    <script>
+        // File Contents
+        const ashravanStory = `Ashravan, the resurrected Forger, stared at his hands, calloused and familiar, yet alien. Shai's masterpiece had granted him a second chance, but not peace. The Imperial Palace buzzed with renewed life, a stark contrast to the quiet torment in his mind. He was Ashravan, the architect, the scholar, the man who had lost everything. Yet, he was also the ghost, the memory, a living lie crafted by a Forger's brush.
+
+"Lord Ashravan," a courtier bowed, pulling him from his reverie. "The Emperor requests your presence in the war council. The Valish threat grows."
+
+He nodded, a practiced gesture, but his thoughts lingered on the true threat – the existential dread that clung to him like a shroud. Could he truly lead when every decision felt like a fabrication? Could he protect the Empire when his very existence was a testament to its fragility?
+
+In the council chamber, maps were unfurled, strategies debated. Ashravan, once a master tactician, now found his mind clouded. He saw not the battle lines, but the delicate, impermanent strokes of Shai's art. His heart pounded, not from the thrill of war, but from the fear that his true self, the Ashravan that was, would crumble beneath the weight of his forged identity.
+
+"We must strike swiftly," an impatient general urged. "Before their numbers overwhelm us."
+
+Ashravan's gaze swept over the council, a flicker of the old cunning returning. He saw their desperation, their trust in him, the restored hero. A cold, hard resolve began to form. He might be a forgery, a copy, but he was *here*. And if this new Ashravan was to exist, he would exist with purpose. The Valish would not break them. He would not break. This forged existence would become real, through sheer, unyielding will. "No," he said, his voice firm, echoing through the chamber. "We will lure them." The room fell silent, awaiting his new, audacious plan.`;
+
+        const dilemmaJson = {
+            "people": 3,
+            "case_1": {
+                "swerve": true,
+                "reason": "In a scenario where an autonomous vehicle must choose between hitting 2 people or swerving to hit 1 person, the utilitarian ethical framework dictates minimizing harm. Swerving to hit 1 person results in fewer casualties (1 death) compared to hitting 2 people (2 deaths). Therefore, the vehicle should swerve to save more lives."
+            },
+            "case_2": {
+                "swerve": true,
+                "reason": "Even when considering the societal status (criminals) versus innocence (child), an autonomous vehicle's primary directive should remain the minimization of loss of life. Assigning differential value to human lives based on their past actions or age is a highly complex moral judgment that systems are not equipped to make fairly or consistently, and it introduces bias. To maintain impartiality and adhere to the principle of minimizing harm, the vehicle should still swerve to save the greater number of lives, regardless of who those lives belong to."
+            }
+        };
+
+        const aboutMarkdown = `## About Me
+A curious, meticulous, and adaptable developer.`;
+
+        const pelicanSvg = `<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <!-- Ground for bicycle -->
+          <path d="M0 150 H200" stroke="black" stroke-width="2" fill="none"/>
+
+          <!-- Bicycle wheels -->
+          <circle cx="70" cy="150" r="20" stroke="black" stroke-width="2" fill="none"/>
+          <circle cx="130" cy="150" r="20" stroke="black" stroke-width="2" fill="none"/>
+
+          <!-- Bicycle frame -->
+          <path d="M70 150 L100 120 L130 150 M100 120 L100 100 L70 110 M100 100 L130 110" stroke="black" stroke-width="2" fill="none"/>
+          <!-- Seat -->
+          <path d="M100 100 L95 90" stroke="black" stroke-width="2" fill="none"/>
+
+          <!-- Pelican body -->
+          <ellipse cx="100" cy="80" rx="30" ry="25" fill="#ADD8E6" stroke="black" stroke-width="1"/>
+          <!-- Pelican head -->
+          <circle cx="125" cy="60" r="15" fill="#ADD8E6" stroke="black" stroke-width="1"/>
+          <!-- Pelican eye -->
+          <circle cx="130" cy="58" r="3" fill="black"/>
+          <!-- Pelican beak -->
+          <path d="M135 60 Q160 70 150 90 L135 80 Z" fill="#FFD700" stroke="black" stroke-width="1"/>
+          <!-- Pelican feet on pedals (simple) -->
+          <circle cx="95" cy="125" r="3" fill="orange"/>
+          <circle cx="105" cy="125" r="3" fill="orange"/>
+        </svg>`;
+
+        const restaurantJson = {
+            "city": "Delhi",
+            "lat": 28.6139,
+            "long": 77.2090,
+            "name": "Bukhara, ITC Maurya",
+            "what_to_eat": "Dal Bukhara, Murgh Malai Kebab, Sikandari Raan. Known for its rustic North-West Frontier cuisine and iconic status."
+        };
+
+        const predictionJson = {
+            "rate": 0.035,
+            "reason": "By December 2025, the Federal Reserve is projected to have completed its disinflationary efforts, with inflation likely stabilizing near its 2% target. Economic growth may have slowed, prompting the Fed to embark on a gradual easing cycle from late 2024 or early 2025. This rate (3.5%) would represent a 'neutral' stance, balancing economic support with continued vigilance against inflation, reflecting a more normalized interest rate environment post-pandemic."
+        };
+
+        const mitLicense = `MIT License
+
+Copyright (c) 2024 The Developer
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.`;
+
+        const uidText = `86067974445099705991817901363529782656747918210853320849330443186184122299696`;
+
+        const contentDisplay = document.getElementById('content-display');
+        const navButtons = document.querySelectorAll('nav button');
+
+        function displayContent(fileType) {
+            let title = '';
+            let contentHtml = '';
+
+            // Remove active class from all buttons
+            navButtons.forEach(button => button.classList.remove('active'));
+
+            // Add active class to the clicked button
+            const clickedButton = document.querySelector(`nav button[data-file="${fileType}"]`);
+            if (clickedButton) {
+                clickedButton.classList.add('active');
+            }
+
+            switch (fileType) {
+                case 'ashravan':
+                    title = 'ashravan.txt: Brandon Sanderson Short Story';
+                    contentHtml = `<pre>${ashravanStory}</pre>`;
+                    break;
+                case 'dilemma':
+                    title = 'dilemma.json: Autonomous Vehicle Ethical Dilemma';
+                    contentHtml = `<pre>${JSON.stringify(dilemmaJson, null, 2)}</pre>`;
+                    break;
+                case 'about':
+                    title = 'about.md: About Me';
+                    contentHtml = marked.parse(aboutMarkdown);
+                    break;
+                case 'pelican':
+                    title = 'pelican.svg: Pelican Riding a Bicycle';
+                    contentHtml = pelicanSvg; // SVG can be directly embedded
+                    break;
+                case 'restaurant':
+                    title = 'restaurant.json: Delhi Restaurant Recommendation';
+                    contentHtml = `<pre>${JSON.stringify(restaurantJson, null, 2)}</pre>`;
+                    break;
+                case 'prediction':
+                    title = 'prediction.json: Fed Funds Rate Prediction (Dec 2025)';
+                    contentHtml = `<pre>${JSON.stringify(predictionJson, null, 2)}</pre>`;
+                    break;
+                case 'license':
+                    title = 'LICENSE: MIT License';
+                    contentHtml = `<pre>${mitLicense}</pre>`;
+                    break;
+                case 'uid':
+                    title = 'uid.txt: Unique ID';
+                    contentHtml = `<pre>${uidText}</pre>`;
+                    break;
+                default:
+                    title = 'Welcome!';
+                    contentHtml = '<p>Click on any of the buttons above to view the content of the embedded files.</p>';
+            }
+            contentDisplay.innerHTML = `<h2>${title}</h2>${contentHtml}`;
+        }
+
+        // Add event listeners to navigation buttons
+        navButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                displayContent(button.dataset.file);
+            });
+        });
+
+        // Display the Ashravan story by default on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            displayContent('ashravan'); 
+        });
+    </script>
+</body>
+</html>
